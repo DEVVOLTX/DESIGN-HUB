@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Responsive design -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>DevVoltX — Design Resources</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       TOP GRADIENT LINE
+  ========================================== -->
+  <div class="top-line"></div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+  <header class="hero">
+
+    <div class="hero__inner">
+
+      <!-- Small brand label -->
+      <div class="brand-label">
+        <span class="brand-dot"></span>
+        DEVVOLTX / DESIGN RESOURCES
+      </div>
+
+      <!-- Main title -->
+      <h1 class="hero__title">
+        كل ما يحتاجه
+        <span class="text-cyan">المصمم</span>
+        في مكان
+        <span class="text-purple">واحد.</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="hero__description">
+        مكتبة منظمة لمصادر التصميم:
+        ألوان، صور، موك أب، أيقونات، UI/UX،
+        فيديوهات، ملفات تصميم ومواقع للإلهام.
+      </p>
+
+      <!-- Credit -->
+      <p class="hero__credit">
+        Designed & Organized by
+        <span>DevVoltX | Amr</span>
+      </p>
+
+
+      <!-- =====================================
+           STATISTICS
+      ====================================== -->
+      <div class="stats">
+
+        <div class="stat-card">
+          <strong id="totalLinks">0</strong>
+          <span>مصدر تصميم</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="totalCategories">0</strong>
+          <span>تصنيف</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="freeCount">0</strong>
+          <span>مجاني</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="favoriteCount">0</strong>
+          <span>المفضلة</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       MAIN LAYOUT
+  ========================================== -->
+  <div class="layout">
+
+
+    <!-- =======================================
+         SIDEBAR
+    ======================================== -->
+    <aside class="sidebar">
+
+      <div class="sidebar__title">
+        CATEGORIES
+      </div>
+
+      <!-- Categories are generated with JS -->
+      <nav
+        class="category-nav"
+        id="categoryNav"
+      ></nav>
+
+    </aside>
+
+
+    <!-- =======================================
+         MAIN CONTENT
+    ======================================== -->
+    <main class="main-content">
+
+
+      <!-- =====================================
+           SEARCH + FILTERS
+      ====================================== -->
+      <div class="toolbar">
+
+        <!-- Search -->
+        <div class="search-box">
+
+          <span class="search-icon">⌕</span>
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="ابحث عن موقع، تصنيف أو رابط..."
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <!-- Filters -->
+        <div
+          class="filters"
+          id="filters"
+        >
+
+          <button
+            class="filter active"
+            data-filter="all"
+          >
+            الكل
+          </button>
+
+          <button
+            class="filter"
+            data-filter="free"
+          >
+            🟢 مجاني
+          </button>
+
+          <button
+            class="filter"
+            data-filter="paid"
+          >
+            🔴 مدفوع
+          </button>
+
+          <button
+            class="filter"
+            data-filter="image"
+          >
+            🖼️ صور
+          </button>
+
+          <button
+            class="filter"
+            data-filter="color"
+          >
+            🎨 ألوان
+          </button>
+
+          <button
+            class="filter"
+            data-filter="ui"
+          >
+            🧩 UI / UX
+          </button>
+
+          <button
+            class="filter"
+            data-filter="mockup"
+          >
+            📱 Mockup
+          </button>
+
+          <button
+            class="filter"
+            data-filter="inspiration"
+          >
+            💡 إلهام
+          </button>
+
+          <button
+            class="filter"
+            data-filter="icon"
+          >
+            ✦ أيقونات
+          </button>
+
+          <button
+            class="filter"
+            data-filter="video"
+          >
+            🎬 فيديو
+          </button>
+
+          <button
+            class="filter"
+            data-filter="file"
+          >
+            📁 ملفات
+          </button>
+
+          <button
+            class="filter"
+            data-filter="brush"
+          >
+            🖌️ فرش
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================
+           RESOURCE SECTIONS
+      ====================================== -->
+
+      <!--
+        JavaScript will generate
+        all categories and resource cards here.
+      -->
+      <div id="sections"></div>
+
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+  <footer class="footer">
+
+    <span>
+      دليل مصادر التصميم — للاستخدام الشخصي
+    </span>
+
+    <span class="footer__dev">
+      Built by
+      <b>DevVoltX</b>
+    </span>
+
+  </footer>
+
+
+  <!-- =========================================
+       TOAST NOTIFICATION
+  ========================================== -->
+  <div
+    class="toast"
+    id="toast"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- Main JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
