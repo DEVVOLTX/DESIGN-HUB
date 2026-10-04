@@ -127,6 +127,13 @@ http://localhost:8000
 
 ---
 
+## 🌐 Portfolio
+
+- Portfolio: https://devvoltx.github.io/Amr/
+- Developer: DevVoltX | Amr
+
+---
+
 ## 🤝 Contribution
 
 إذا رغبت في المساهمة:
